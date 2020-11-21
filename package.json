@@ -1,0 +1,26 @@
+{
+  "name": "color-app",
+  "version": "1.0.0",
+  "description": "Simple page with a message and different colors",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/peterj/color-app.git"
+  },
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Peter Jausovec",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
