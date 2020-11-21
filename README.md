@@ -19,22 +19,7 @@ The colors can be provided as names (`red`, `green`) or as HEX values (`#FF0000`
 | --- | --- |
 | `node app.js` | ![Default page](./img/default.png) |
 | `FG_COLOR=blue BG_COLOR=lightgreen node app.js` | ![Light green](./img/light-green.png) |
-| `MESSAGE="Hello world!" FG_COLOR="#f3f4f6" BG_COLOR="#2563eb" node app.js` | ![Light green with message](./img/light-green-message.png) |
-
-
-```bash
-FG_COLOR=blue BG_COLOR=lightgreen node app.js
-```
-
-Renders the following page:
-
-![Light green](./img/light-green.png)
-
-You can also provide your own message, instead of defaulting to the background color name:
-
-```bash
-MESSAGE="Hello world!" FG_COLOR=blue BG_COLOR=lightgreen node app.js
-```
+| `MESSAGE="Hello world!" FG_COLOR="#f3f4f6" BG_COLOR="#2563eb" node app.js` | ![Blue white with message](./img/blue-white-message.png) |
 
 ### Using Docker image
 
