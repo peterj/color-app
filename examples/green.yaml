@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: green
+  labels:
+    app: green
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: green
+  template:
+    metadata:
+      labels:
+        app: green
+    spec:
+      containers:
+        - image: pj3677/color-app:1.0.0
+          imagePullPolicy: Always
+          name: green
+          ports:
+            - containerPort: 3000
+          env:
+            - name: BG_COLOR
+              value: "#10b981"
+            - name: FG_COLOR
+              value: "#FFFFFF"
+            - name: MESSAGE
+              value: "GREEN"
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: green
+  labels:
+    app: green
+spec:
+  selector:
+    app: green
+  ports:
+    - port: 80
+      name: http
+      targetPort: 3000
