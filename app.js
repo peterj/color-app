@@ -24,16 +24,16 @@ function getStyleFromEnv() {
   };
 }
 
-app.get('/', (req, res) => {
-  const { styleClass, message } = getStyleFromEnv();
-
-  res.render('index', { style: styleClass, message });
-});
-
 app.get('/version', (req, res) => {
   const pkg = require('./package.json');
   const version = process.env.VERSION || pkg.version;
   res.json({ version });
+});
+
+app.get('*', (req, res) => {
+  const { styleClass, message } = getStyleFromEnv();
+
+  res.render('index', { style: styleClass, message });
 });
 
 const port = process.env.PORT || 3000;
