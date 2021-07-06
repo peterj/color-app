@@ -6,7 +6,6 @@ const app = express();
 
 app.use(morgan('dev'));
 app.set('view engine', 'ejs');
-app.use(express.static(path.join(__dirname, 'public')));
 
 // gets the style information from the env variables
 // {

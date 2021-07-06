@@ -1,7 +1,16 @@
-<link href="/css/style.css" rel="stylesheet" type="text/css">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+<html style="font-family:'Montserrat', sans-serif;">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+    </head>
 
-<div class="main" style="<%= style %>">
-    <h1><%= message %></h1>
-</div>
+    <body style="margin: 0; padding: 0;">
+        
+        <div style="display: flex; justify-content: center; align-items: center; height: 100vh; <%= style %>">
+            <h1 style="font-size: 8rem;">
+                <%= message %>
+            </h1>
+        </div>
+    </body>
+
+</html>
