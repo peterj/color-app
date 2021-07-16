@@ -1,10 +1,13 @@
 const express = require('express');
-const path = require('path');
 const morgan = require('morgan');
 
 const app = express();
 
-app.use(morgan('dev'));
+morgan.token('req-headers', function(req,res){
+  return JSON.stringify(req.headers)
+ });
+
+app.use(morgan(':method :url :status :req-headers'));
 app.set('view engine', 'ejs');
 
 // gets the style information from the env variables
@@ -31,7 +34,6 @@ app.get('/version', (req, res) => {
 
 app.get('*', (req, res) => {
   const { styleClass, message } = getStyleFromEnv();
-
   res.render('index', { style: styleClass, message });
 });
 
